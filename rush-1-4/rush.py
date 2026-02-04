@@ -11,15 +11,18 @@ def rush(x,y):
         print("Invalid size", file=sys.stderr)
         return
     # Your implementation here
+    # When height is 1
     if y==1:
         print("B" * x)
         return
+    # Top and Bottom rows
     for row in range(y):
         if row==0 or row==y-1:
             if x==1:
                 print("B")
             else:
                 print("A" + "B" * (x - 2) + "C")
+        # Middle Rows
         else:
             if x==1:
                 print("B")

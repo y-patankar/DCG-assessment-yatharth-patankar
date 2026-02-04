@@ -12,11 +12,14 @@ def rush(x,y):
         return
     # Your implementation here
     for row in range(y):
+        # Top and Bottom rows
         if row == 0 or row == y - 1:
+            # Single corner case
             if x == 1:
                 print("o")
             else:
                 print("o" + "-" * (x - 2) + "o")
+        # Middle Rows
         else:
             if x == 1:
                 print("|")
